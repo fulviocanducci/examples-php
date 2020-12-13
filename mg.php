@@ -1,4 +1,8 @@
-<?php //https://www.php.net/manual/pt_BR/book.bson.php
+<?php
+
+//https://www.php.net/manual/pt_BR/book.bson.php
+//https://docs.mongodb.com/php-library/master/reference/class/MongoDBClient/
+
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
