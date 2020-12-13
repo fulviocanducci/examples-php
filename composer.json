@@ -1,0 +1,6 @@
+{
+    "require": {
+        "canducci/zipcode": "^3.0",
+        "mongodb/mongodb": "^1.8"
+    }
+}
