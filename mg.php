@@ -6,6 +6,8 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
+date_default_timezone_set("America/Sao_Paulo");
+
 include('vendor/autoload.php');
 
 use MongoDB\Client;
@@ -29,7 +31,7 @@ $updateResult = $people->replaceOne(
   [
     'name' => 'Hugo Leonardo Canducci Dias',
     'status' => false,
-    'updated' => new UTCDateTime(),
+    'updated' => new UTCDateTime(strtotime("now") * 1000),
     'value' => new Decimal128(152.25)
   ]
 );
@@ -38,3 +40,5 @@ foreach ($people->find() as $p) {
   printf('%s %s', $p['name'], $p['status'] ? "true" : "false");
   echo '<br />';
 }
+
+echo date('Y-m-d H:i:s');
